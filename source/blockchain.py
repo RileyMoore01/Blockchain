@@ -1,3 +1,9 @@
+'''
+Installs needed to run this
+
+pip install Flask==0.12.2 requests==2.18.4 
+'''
+
 import hashlib
 import json
 from time import time
