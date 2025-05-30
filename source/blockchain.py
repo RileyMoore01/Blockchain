@@ -49,7 +49,8 @@ class Blockchain(object):
   def hash(self):
     pass #hashes a block
 
+  #returns the last block in the chain
   @property
   def last_block(self):
-    pass #returns the last block in the chain
+    return self.chain[-1]
 
