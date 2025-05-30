@@ -1,3 +1,7 @@
+import hashlib
+import json
+from time import time
+
 # creates an intital empty list (to store our blockchain) and another to store transactions
 class Blockchain(object):
   def __init__(self):
@@ -45,9 +49,18 @@ class Blockchain(object):
 
     return self.last_block['index'] + 1
 
+  #hashes a block
   @staticmethod
   def hash(self):
-    pass #hashes a block
+      """
+      Creates a SHA-256 hash of a Block
+      :param block: <dict> Block
+      :return: <str>
+    """
+    
+    # we must make sure that the dictionary is ordered, or well have inconsistencies
+    block_string = json.dumps(block, sort_keys = True).encode()
+    return hashlib.sha256(block_string).hexdigest()
 
   #returns the last block in the chain
   @property
