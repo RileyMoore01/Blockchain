@@ -7,8 +7,9 @@ class Blockchain(object):
   def new_block(self):
     pass # creates a new block and adds it to the chain
 
+  # add a new transaction to the list of transactions
   def new_transaction(self):
-    pass # add a new transaction to the list of transactions
+    pass 
 
   @staticmethod
   def hash(self):
