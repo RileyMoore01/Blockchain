@@ -6,7 +6,9 @@ pip install Flask==0.12.2 requests==2.18.4
 
 import hashlib
 import json
+
 from time import time
+from uuid import uuid4
 
 # creates an intital empty list (to store our blockchain) and another to store transactions
 class Blockchain(object):
